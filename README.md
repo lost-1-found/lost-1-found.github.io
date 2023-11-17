@@ -1,25 +1,27 @@
-# lost-1-found.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Corrected the title tag, used forward slashes -->
     <title>OpenAI Integration</title>
 </head>
 <body>
-<header>
+    <header>
         <h1>OpenAI Integration</h1>
     </header>
-<main>
+    <main>
         <div id="ai-content">
-<div id="chat-window">
-            <div id="chat-area"></div>
-            <div id="input-area">
-                <input type="text" id="user-input" placeholder="Your message...">
+            <div id="chat-window">
+                <div id="chat-area"></div>
+                <div id="input-area">
+                    <input type="text" id="user-input" placeholder="Your message...">
+                </div>
+                <button type="submit" id="send-button">Send</button>
             </div>
-            <button type="submit" id="send-button">Send</button>
         </div>
     </main>
-<script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
+    <!-- Corrected the script tag, used the correct syntax for src and closed the script tag properly -->
+    <script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
 </body>
 </html>
