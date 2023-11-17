@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Corrected the title tag, used forward slashes -->
     <title>OpenAI Integration</title>
 </head>
 <body>
@@ -21,7 +20,6 @@
             </div>
         </div>
     </main>
-    <!-- Corrected the script tag, used the correct syntax for src and closed the script tag properly -->
     <script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
 </body>
 </html>
