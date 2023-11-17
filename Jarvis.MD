@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JARVIS. (All-knowing Keeper of Secrets)</title>
+    <script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
 </head>
 <body>
     <header>
