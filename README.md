@@ -20,6 +20,6 @@
             </div>
         </div>
     </main>
-    <script> src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
 </body>
 </html>
