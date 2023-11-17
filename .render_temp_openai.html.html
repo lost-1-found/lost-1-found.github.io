@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"JARVIS. (all knowing keeper of secrets)"</title>
+<script src="https://cdn.jsdelivr.net/npm/openai@0.30.0"></script>
+<script>
+  // Get the necessary elements from your HTML
+  const chatArea = document.getElementById("chat-area");
+  const userInput = document.getElementById("user-input");
+  const sendButton = document.getElementById("send-button");
+  const systemPromptInput = document.getElementById("system-prompt-input");
+
+  // Listen for user input and handle it
+  sendButton.addEventListener("click", async () => {
+    const userMessage = userInput.value;
+    const systemPrompt = systemPromptInput.value;
+
+    const response = await fetch('/api/completion', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userMessage, systemPrompt })
+    });
+
+    const { aiResponse } = await response.json();
+
+    // Display the user's message
+    chatArea.innerHTML += `<p>You: ${userMessage}</p>`;
+
+    // Display the AI's response
+    chatArea.innerHTML += `<p>AI: ${aiResponse}</p>`;
+
+    userInput.value = "";
+  });
+
+  // Feel free to add more code to enhance your chatbot's functionality
+</script>
+</head>
+<body>
+<header>
+        <h1>JARVIS. (all knowing keeper of secrets)</h1>
+    </header>
+<main>
+        <div id="ai-content"></div>
+<div id="chat-window">
+            <div id="chat-area"></div>
+            <div id="input-area">
+                <input type="text" id="user-input" placeholder="Tell me what you seek?">
+            </div>
+            <button type="submit" id="send-button">Send</button>
+        </div>
+    </main>
+</body>
+</html><script>window.scrollTo(0, 0); setTimeout(function() { window.scrollTo(0, 0); },200)</script>
